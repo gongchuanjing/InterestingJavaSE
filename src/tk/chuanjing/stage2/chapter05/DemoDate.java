@@ -27,11 +27,19 @@ public class DemoDate {
 		4、	把明天的毫秒值转换成date对象。
 	 */
 	private static void test01() {
-//		1、	计算一天的毫秒值是多少；
+		// 1、	计算一天的毫秒值是多少；
+		long oneDay = 1000 * 60 * 60 * 24;
 		
-//		2、	得到今天此时的毫秒值；
-//		3、	用今天此时的毫秒值加上一天的毫秒值，得出明天此时的毫秒；
-//		4、	把明天的毫秒值转换成date对象。
+		// 2、	得到今天此时的毫秒值；
+		long now = new Date().getTime();
+		
+		// 3、	用今天此时的毫秒值加上一天的毫秒值，得出明天此时的毫秒；
+		long  tomorrow = now + oneDay;
+		
+		// 4、	把明天的毫秒值转换成date对象。
+		Date tomorrowDate = new Date(tomorrow);
+		
+		System.out.println(tomorrowDate.toLocaleString());
 	}
 	
 	
