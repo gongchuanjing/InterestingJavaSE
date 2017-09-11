@@ -1,4 +1,4 @@
-package tk.chuanjing.stage2.chapter05;
+package tk.chuanjing.stage2.chapter05.test;
 
 import java.util.Date;
 
