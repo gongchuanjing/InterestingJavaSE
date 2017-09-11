@@ -19,14 +19,13 @@ public class ExceptionDemo7 {
 //		boolean flag = checkScore(-10);
 //		System.out.println(flag);
 		
+//		checkScore(110);
+		
 		try {
 			checkScore(110);
 		} catch (Exception e) {
-			//System.out.println(e.getMessage());
 			e.printStackTrace();
 		}
-		
-		//checkScore(110);
 	}
 	
 	/*
@@ -38,7 +37,6 @@ public class ExceptionDemo7 {
 		
 		//符合
 		return true;
-		
 	}
 	*/
 	
@@ -50,9 +48,26 @@ public class ExceptionDemo7 {
 	public static void checkScore(int score) throws Exception {
 		if(score < 0 || score > 100) {
 //			throw new RuntimeException("考试成绩不符合要求");
-			throw new Exception("考试成绩不符合要求");
+//			throw new Exception("考试成绩不符合要求");
+			throw new MyException("自定义异常：考试成绩不符合要求");
 		} 
 		
 		System.out.println("考试成绩符合要求");
+	}
+}
+
+/**
+ * 自定义一个异常类
+ * @author ChuanJing
+ *
+ */
+class MyException extends /*RuntimeException*/ Exception{
+
+	public MyException() {
+		super();
+	}
+
+	public MyException(String message) {
+		super(message);
 	}
 }
