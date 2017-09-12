@@ -1,5 +1,6 @@
 package tk.chuanjing.stage2.chapter05.test;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -13,7 +14,8 @@ public class DemoDate {
 //		Date d = new Date(1000L * 60 * 60 * 24 * 365);//注意，这个地方传参必须是long类型
 //		System.out.println(d.toLocaleString());
 		
-		test01();
+//		test01();
+		test02();
 	}
 
 	/**
@@ -42,5 +44,19 @@ public class DemoDate {
 		System.out.println(tomorrowDate.toLocaleString());
 	}
 	
-	
+	/**
+	 * 月是从0开始的，所以，想表示3月，写2就行了，然后在得到月时需要加一再输出。
+	 */
+	public static void test02() {
+		Calendar c = Calendar.getInstance();
+		
+		c.set(Calendar.YEAR, 2000);
+		c.set(Calendar.MONTH, 2);
+		c.set(Calendar.DAY_OF_MONTH, 1);	
+		c.add(Calendar.DAY_OF_MONTH,-1);
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH) + 1;	
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		System.out.println(year+"年"+month+"月"+day+"日");
+	}
 }
