@@ -50,7 +50,7 @@ public class ExceptionDemo7 {
 //			throw new RuntimeException("考试成绩不符合要求");
 //			throw new Exception("考试成绩不符合要求");
 			throw new MyException("自定义异常：考试成绩不符合要求");
-		} 
+		}
 		
 		System.out.println("考试成绩符合要求");
 	}
