@@ -43,4 +43,24 @@ public class TestBeanUtils {
 		
 		System.out.println(user);
 	}
+	
+	/**
+	 * map的值必须是字符串数组吗？no，下面就是测试
+	 */
+	@Test
+	public void demo3() throws Exception {
+		User user = new User();
+		
+		Map<String, Object> map = new HashMap<String,Object>();
+		map.put("uid", "002");
+		map.put("userName", "ben");
+		map.put("password", "00000");
+		map.put("hobbies", new String[]{"乒乓球", "书法"});
+//		map.put("age", 22);
+		map.put("age", "22");
+		
+		BeanUtils.populate(user, map);
+		
+		System.out.println(user);
+	}
 }
