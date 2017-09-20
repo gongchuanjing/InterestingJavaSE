@@ -1,4 +1,4 @@
-package tk.chuanjing.stage2.chapter13.textbook;
+package tk.chuanjing.stage2.chapter13.reflect;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
@@ -13,7 +13,7 @@ import org.junit.Test;
  */
 public class ReflectDeme {
 	
-	private String className = "tk.chuanjing.stage2.chapter13.textbook.ReflectBean";
+	private String className = "tk.chuanjing.stage2.chapter13.reflect.ReflectBean";
 
 	//-----------------------获取类---------------------------
 	@Test

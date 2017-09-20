@@ -1,4 +1,4 @@
-package tk.chuanjing.stage2.chapter13.textbook;
+package tk.chuanjing.stage2.chapter13.reflect;
 
 import java.util.Arrays;
 
@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @version 1.0
  */
 public class ReflectBean {
-
+	
 	private String id;
 	private String className;
 	public String desc;
