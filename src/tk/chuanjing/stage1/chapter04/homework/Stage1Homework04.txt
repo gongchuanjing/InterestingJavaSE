@@ -1,0 +1,102 @@
+今日作业(必做)
+------------------------------------------------------------------
+第一题：分析以下需求，并用代码实现
+	1.键盘录入班级人数
+	2.根据录入的班级人数创建数组
+	3.利用随机数产生0-100的成绩(包含0和100)
+	4.要求:
+		(1)打印该班级的不及格人数
+		(2)打印该班级的平均分
+		(3)演示格式如下:
+			请输入班级人数:
+			键盘录入:100
+			控制台输出:
+				不及格人数:19
+				班级平均分:87
+	
+第二题：分析以下需求，并用代码实现
+	1.基础班考试要进行分组,键盘录入该班级总共多少组?以及每组的学生数量?
+	2.根据录入的组数及每组学员的数量创建二维数组
+	3.利用随机数产生0-100的成绩(包含0和100)
+	4.要求:
+		(1)打印该班级中每组的不及格人数
+		(2)打印该班级中每组的平均分
+		(3)打印组的最高平均分
+		(4)打印班级中的不及格人数
+		(5)打印班级平均分
+		(6)演示格式如下:
+			请输入班级总组数:3
+			请输入班级中每组的人数:10
+			控制台输出:
+				第1组不及格人数为: 6 人
+				第1组平均分为: 52
+				第2组不及格人数为: 7 人
+				第2组平均分为: 46
+				第3组不及格人数为: 3 人
+				第3组平均分为: 69
+				班级中单组最高平均分为:69
+				班级中不及格人数为: 16 人
+				班级总平均分为: 56
+
+第三题：看程序说结果，请不要提前运行？
+
+	public class Test03_01 {
+		public static void main(String[] args) {
+			int[] arr1 = {1,2,3,4,5};
+			int[] temp1 = arr1;
+			int[] temp2 = arr1;
+			System.out.println("通过temp1取出数组值: ");
+			
+			for(int i = 0;i<temp1.length;i++) {
+				System.out.print(temp1[i]+" ");
+			}
+			System.out.println();
+			System.out.println("通过temp2取出数组值: ");
+			for(int i = 0;i<temp2.length;i++) {
+				System.out.print(temp2[i]+" ");
+			}
+			System.out.println();
+			temp1[2] = 9;
+			
+			System.out.println("通过temp1取出数组值: ");
+			for(int i = 0;i<temp1.length;i++) {
+				System.out.print(temp1[i]+" ");
+			}
+			System.out.println();
+			System.out.println("通过temp2取出数组值: ");
+			for(int i = 0;i<temp2.length;i++) {
+				System.out.print(temp2[i]+" ");
+			}
+			System.out.println();
+			
+		}
+	}
+	
+	public class Test03_02 {
+		public static void main(String[] args) {
+			int[] arr1 = {1,2,3,4,5};
+			int[] arr2 = {5,6,7};
+			int[] temp = arr1;
+			
+			System.out.println("通过temp取出arr1中的元素: ");
+			
+			for(int i = 0;i<temp.length;i++) {
+				System.out.print(temp[i]+" ");
+			}
+			
+			temp = arr2;
+			
+			System.out.println("通过temp取出arr2中的元素: ");
+			
+			for(int i = 0;i<temp.length;i++) {
+				System.out.print(temp[i]+" ");
+			}
+			
+		}
+	}
+
+第四题:练习今日视频中的代码
+	
+
+	
+
