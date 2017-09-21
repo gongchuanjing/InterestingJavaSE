@@ -1,0 +1,207 @@
+今日作业(必做)
+------------------------------------------------------------------
+第一题：分析以下需求，并用代码实现
+	1.定义一个HelloWold类
+	2.在类中定义主方法
+	3.在主方法中使用输出语句在dos控制台打印HelloWorld
+	打印结果如：HelloWorld
+	4.在案例中使用当行注释、多行注释添加相关的说明信息
+	
+	参考答案：
+	
+		//这是今天作业中的HelloWorld案例
+		public class HelloWorld {
+			/*
+				这是main方法
+				main是程序的入口方法
+				所有代码的执行都是从main方法开始的
+			*/
+			public static void main(String[] args) {
+				//这是输出语句
+				System.out.println("HelloWorld");
+			}
+		}
+
+
+第五题：分析以下需求，完成以下代码
+	1.完成错误代码的修改(在day01_source\"错误代码"文件夹中,有4个.java文件。每个.java文件中的代码都有问题,请修改)。
+	
+	参考答案：
+		见："每天练习\day01作业\改正后代码"文件夹
+	
+第六题：以下选项中的标识符中，哪些是合法的()
+	A:	username
+	B:	123username  //不能以数字开头
+	C:	username123
+	D:	class		//不能使用关键字
+	E:	user_name
+	F:	98.3		//不能以数字开头
+	G:	_username
+	H:	HelloWorld
+	I:	$ username	//不能包含空格
+	
+	参考答案：
+		A、C、E、G、H
+
+第七题：找出以下代码的错误，并修改
+	public class Test07_01 {
+		public static void main(String[] args) {
+			int a;//局部变量必须先初始化
+			System.out.println(a);
+			{
+				int c = 20;
+				System.out.println(c);
+			}
+			c = 30;//超出访问的访问，只能在所定义的{}内部访问
+			System.out.println(c);
+		}
+	}
+	
+	参考答案：
+		public class Test07_01 {
+			public static void main(String[] args) {
+				int a = 20;//局部变量必须先初始化
+				int c;
+				System.out.println(a);
+				{
+					c = 20;
+					System.out.println(c);
+				}
+				c = 30;//超出访问的访问，只能在所定义的{}内部访问
+				System.out.println(c);
+			}
+		}
+	
+	public class Test07_02 {
+		public static void main(String[] args) {
+			byte b = 3;
+			b = b + 4;//byte类型的变量b参加运算，首先提升为int类型，然后与4相加，结果为7（为int类型），将int类型的7赋值给byte类型的变量b，会损失精度
+			System.out.println("b=" + b);
+		}
+	}
+	
+	参考答案：
+		public class Test07_02 {
+			public static void main(String[] args) {
+				byte b = 3;
+				b = (byte)( b + 4);//注意不能这么改：b = (byte)b + 4;
+				System.out.println("b=" + b);
+			}
+		}
+	
+	
+	public class Test07_03 {
+		public static void main(String[] args) {
+			int x = 2;
+			{
+				int y = 6;
+				System.out.println("x is " + x);
+				System.out.println("y is " + y);
+			}
+			y = x;
+			System.out.println("x is " + x);
+		}
+	}
+	
+	参考答案：
+		public class Test07_03 {
+			public static void main(String[] args) {
+				int x = 2;
+				int y ;
+				{
+					y = 6;
+					System.out.println("x is " + x);
+					System.out.println("y is " + y);
+				}
+				y = x;
+				System.out.println("x is " + x);
+			}
+		}
+	
+
+第八题：分析以下需求，并用代码实现
+	1.定义一个Test08类
+	2.要求在控制台打印输出一段话：
+	效果如下：
+		谁不曾一意孤行，怒发冲冠过怕只怕少了那份执着!
+		世界上那些最容易的事情中，拖延时间最不费力!
+		你若不想做，会找一个或无数个借口；你若想做，会想一个或无数个办法!
+	
+	参考答案：
+		public class Test08 {
+			public static void main(String[] args) {
+				System.out.println("谁不曾一意孤行，怒发冲冠过怕只怕少了那份执着!");
+				System.out.println("世界上那些最容易的事情中，拖延时间最不费力!");
+				System.out.println("你若不想做，会找一个或无数个借口；你若想做，会想一个或无数个办法!");
+			}
+		}
+		
+第九题：分析以下需求，并用代码实现
+	1.定义一个Test09类
+	2.要求在控制台打印以下数据(利用常量的方式)：
+		(1)字符串常量	"不忘初心方得始终"
+		(2)整数常量		88,-88
+		(3)小数常量		88.888
+		(4)字符常量		'A','8'
+		(5)布尔常量		true,false
+		
+	参考答案：
+		public class Test09 {
+			public static void main(String[] args) {
+				System.out.println("不忘初心方得始终");
+				System.out.println(88);
+				System.out.println(-88);
+				System.out.println(88.888);
+				System.out.println('A');
+				System.out.println('0');
+				System.out.println(true);
+				System.out.println(false);
+			}
+		}
+		
+第十题：分析以下需求，并用代码实现
+	1.阐述java中有哪几种数据类型
+	1.定义一个Test10类
+	2.要求在控制台打印以下数据(利用变量的方式)：
+		(1)字符串变量s:		"不忘初心方得始终"
+		(2)整数常量i1:		88,	i2:-88
+		(3)小数常量d:		88.888
+		(4)字符常量ch1:		'A',	ch2:'8'
+		(5)布尔常量flag1:	true,	flag2:false
+		
+	参考答案：
+		public class Test10 {
+			public static void main(String[] args) {
+				String s = "不忘初心方得始终";
+				int i1 = 88;
+				int i2 = -88;
+				double d = 88.888;
+				char ch1 = 'A', ch2 = '8';
+				boolean flag1 = true, flag2 = false;
+				System.out.println("s=" + s);
+				System.out.println("i1" + i1);
+				System.out.println("i2" + i2);
+				System.out.println("d" + d);
+				System.out.println("ch1" + ch1);
+				System.out.println("ch2" + ch2);
+				System.out.println("flag1" + flag1);
+				System.out.println("flag2" + flag2);
+			}
+		}
+		
+第十一题：分析以下伪代码，根据需求做出解释
+	
+		byte b1=3,b2=4,b;
+		b=b1+b2;
+		b=3+4;
+		哪句是编译失败的呢？为什么呢？
+	
+	参考答案：
+		b=b1+b2;编译报错，虽然b1和b2都是byte类型，但是在进行+运算时，会提升为int类型，
+		所以b1+b2的结果虽然为7，但是是int类型，而变量b是byte类型，将int类型的变量赋值给byte类型的变量，会出现损失精度
+		解决办法：
+			1.使用强制类型转换 b = (byte)(b1+b2); //正确的解决方法
+			2.使用强制类型转换 b = (byte)b1+b2; //错误的解决方法
+			3.使用强制类型转换 b = (byte)b1+(byte)b2; //错误的解决方法
+		b=3+4;编译不报错，因为3和4都是常量，java虚拟机对常量有优先处理机制，在编译阶段就能确定最终的结果3+4=7，
+		而7正好在byte数据的取值范围内(-128到127)，所以可以正常赋值
