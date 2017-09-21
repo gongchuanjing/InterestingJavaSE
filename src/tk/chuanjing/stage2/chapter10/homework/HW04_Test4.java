@@ -10,7 +10,7 @@ import java.io.PrintWriter;
  *		1.使用所学过字节流
  *		2.使用打印流;  (PrintWriter)
  */
-public class Test4 {
+public class HW04_Test4 {
 	public static void main(String[] args) throws Exception {
 		//创建字节流对象
 		FileInputStream fis = new FileInputStream("res//test.txt");
