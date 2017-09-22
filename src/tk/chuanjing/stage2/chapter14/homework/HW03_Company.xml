@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	xml的练习
+	通过xml文件来描述多个公司(腾讯,百度,阿里,新浪)
+	每一个公司有营业额(这个用属性来表示)
+	每个公司都有领导人
+	每一个领导人都有年龄(这个请用属性来描述)
+	每个领导人都有名字(这个请子标签来描述)
+-->
+<![CDATA[
+	<Companys>
+		<Company name="腾讯" 营业额="2000亿">
+			<Leader 年龄="46"> 
+		      <Name>马化腾</Name> 
+		    </Leader>
+		</Company>
+	</Companys>
+]]>
+
+<Company> 
+  <Tencent 营业额="2000亿"> 
+    <Leader 年龄="46"> 
+      <Name>马化腾</Name> 
+    </Leader> 
+  </Tencent>
+  
+  <BaiDu 营业额="2000亿"> 
+    <Leader 年龄="50"> 
+      <Name>李彦宏</Name> 
+    </Leader> 
+  </BaiDu>
+
+  <ALi 营业额="6000亿"> 
+    <Leader 年龄="58"> 
+      <Name>马云</Name> 
+    </Leader> 
+  </ALi>
+
+  <Sina 营业额="1200亿"> 
+    <Leader 年龄="58"> 
+      <Name>马云</Name> 
+    </Leader> 
+  </Sina> 
+</Company>

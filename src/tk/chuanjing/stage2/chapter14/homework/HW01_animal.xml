@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+	用xml来描述五种动物(猫,狗,猪,牛,羊) 
+	每种动物都有自己的体重(用属性来描述,值自己去添加)
+	每种动物都有自己的毛色(这个用子标签形式描述出来,值自己添加)
+-->
+<Animal> 
+  <Cat weight="2"> 
+    <color>花色</color> 
+  </Cat>  
+  <Dog weight="2"> 
+    <color>黑色</color> 
+  </Dog>  
+  <Ox weight="56kg"> 
+    <color>黄色</color> 
+  </Ox>  
+  <Sheep weight="40kg"> 
+    <color>白色</color> 
+  </Sheep>  
+  <Big weight="50kg"> 
+    <color>白色</color> 
+  </Big>  
+  <daxiang weight="200kg">
+    <color>灰色</color>
+  </daxiang>
+</Animal>

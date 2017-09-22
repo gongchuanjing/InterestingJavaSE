@@ -16,7 +16,7 @@ public class Dom4JUtils {
 	    Document document = reader.read("src/tk/chuanjing/stage2/chapter14/textbook/city.xml");
 	    return document;
 	}
-	
+
 	//to
 	public static void write2XML(Document document) throws IOException {
 		OutputFormat format = OutputFormat.createPrettyPrint();
