@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean id="bean001" className="com.itheima.day26day03.User">
+		<property name="uid" value="u001"></property>
+		<property name="userName" value="jack"></property>
+		<property name="password" value="12345"></property>
+	</bean>
+	
+	<bean id="bean002" className="com.itheima.day26day03.Book">
+		<property name="bid" value="b001"></property>
+		<property name="title" value="未来简史"></property>
+		<property name="price" value="89"></property>
+	</bean>
+</beans>

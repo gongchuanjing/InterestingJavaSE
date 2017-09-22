@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+	<bean>哈哈</bean>
+	<!-- <bean>1<3</bean> -->
+	<![CDATA[
+		这里是文本，随便写 < > " &
+	]]>
+</beans>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.itcast.cn/bean"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.itcast.cn/bean bean-schema.xsd" >
+	   
+	   <import resource=""/>
+	   
+	   <bean className="" id="">
+	   	<property name="" value=""/>
+	   </bean>
+	   <bean className="" id=""></bean>
+	   
+	   <import resource=""/>
+</beans>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+	Schema教学实例文档。
+	模拟spring规范，如果开发人员需要在xml使用当前Schema约束，必须包括指定命名空间。
+	格式如下：
+	<beans xmlns="http://www.itcast.cn/bean"
+	   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	   xsi:schemaLocation="http://www.itcast.cn/bean bean-schema.xsd"
+	>
+-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" 
+		targetNamespace="http://www.itcast.cn/bean"
+		xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+		xmlns:tns="http://www.itcast.cn/bean" 
+		elementFormDefault="qualified">
+	<!-- 声明根标签 -->
+	<element name="beans">
+		<complexType>
+			<choice minOccurs="0" maxOccurs="unbounded">
+				<element name="bean">
+					<complexType>
+						<sequence minOccurs="0" maxOccurs="unbounded">
+							<element name="property">
+								<complexType>
+									<attribute name="name" use="required"></attribute>
+									<attribute name="value" use="required"></attribute>
+								</complexType>
+							</element>
+						</sequence>
+						<attribute name="id" use="required"></attribute>
+						<attribute name="className" use="required"></attribute>
+					</complexType>
+				</element>
+				<element name="import">
+					<complexType>
+						<attribute name="resource" use="required"></attribute>
+					</complexType>
+				</element>
+			</choice>
+		</complexType>
+	</element>
+</schema>

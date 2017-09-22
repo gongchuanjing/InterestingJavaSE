@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	DTD教学实例文档。
+	模拟spring规范，如果开发人员需要在xml使用当前DTD约束，必须包括DOCTYPE。
+	格式如下：
+	<!DOCTYPE beans SYSTEM "bean.dtd">
+-->
+<!ELEMENT beans (bean*,import*) >
+<!ELEMENT bean (property*)>
+<!ELEMENT property (#PCDATA)>
+
+<!ELEMENT import (#PCDATA)>
+
+<!ATTLIST bean id CDATA #REQUIRED
+			   className CDATA #REQUIRED
+>
+
+<!ATTLIST property name CDATA #REQUIRED
+			   	   value CDATA #REQUIRED
+>
+
+<!ATTLIST import resource CDATA #REQUIRED>
+
+
