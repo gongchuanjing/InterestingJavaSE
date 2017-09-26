@@ -22,7 +22,7 @@ public class Exam31 {
 			if(isSXH(x)) {				
 				System.out.print(x+"\t");
 				count++;
-				if(count%2==0) {
+				if(count % 2==0) {
 					System.out.println();
 				}
 			}
@@ -31,7 +31,9 @@ public class Exam31 {
 	}
 	
 	/**
-	 * 判断一个三维数字是否是水仙花数
+	 * 判断一个数字是不是水仙花数
+	 * @param num 一个整型数字
+	 * @return true代表是一个水仙花数，false代表不是水仙花数
 	 */
 	public static boolean isSXH(int num) {
 		//获取个位，十位，百位

@@ -4,7 +4,7 @@ package tk.chuanjing.stage1.chapter06.exam;
  * @date 2017年9月25日 下午6:06:56
  * @version 1.0
  */
-public class Exam01To30 {
+public class MyExam01To30 {
 	public static void main(String[] args) {
 //		  test03();
 		  test15();
