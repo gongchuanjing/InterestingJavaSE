@@ -24,7 +24,6 @@ import org.junit.Test;
 public class HW01 {
 	
 	public static void main(String[] args) {
-		
 		int sum = 0;//不及格人数
 		int count = 0;//所有人的成绩
 		
