@@ -1,4 +1,4 @@
-package tk.chuanjing.stage3.chapter04.datasource;
+package tk.chuanjing.stage3.chapter04.datasource_dbcp;
 
 import java.sql.Connection;
 import java.sql.SQLException;
