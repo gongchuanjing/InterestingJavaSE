@@ -9,8 +9,7 @@ import java.sql.Statement;
 /**
  * @author ChuanJing
  * @date 2017年5月11日 下午1:01:07
- * @version 1.0
-
+ * @version 1.0
  *  实现JDBC的工具类
  *  定义方法,直接返回数据库的连接对象
  *  
