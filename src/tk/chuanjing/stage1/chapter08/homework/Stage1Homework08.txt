@@ -1,0 +1,46 @@
+今日作业(必做)
+------------------------------------------------------------------
+第一题：分析以下需求，并用代码实现
+	1.定义如下方法public static String getPropertyGetMethodName(String property)
+		功能描述:
+			(1)该方法的参数为String类型，表示用户给定的成员变量的名字，返回值类型为String类型，返回值为成员变量对应的get方法的名字
+			(2)如：用户调用此方法时给定的参数为"name",该方法的返回值为"getName"
+	2.定义如下方法public static String getPropertySetMethodName(String property)
+		功能描述:
+			(1)该方法的参数为String类型，表示用户给定的成员变量的名字，返回值类型为String类型，返回值为成员变量对应的set方法的名字
+			(2)如：用户调用此方法时给定的参数为"name",该方法的返回值为"setName"
+
+第二题：分析以下需求，并用代码实现
+	1.键盘录入一个大字符串,再录入一个小字符串
+	2.统计小字符串在大字符串中出现的次数
+	3.代码运行打印格式:
+		请输入大字符串:javajava I love java l like jajavava I enjoy javajavajava
+		请输入小字符串:heima
+		控制台输出:小字符串heima,在大字符串woaiheima,heimabutongyubaima,wulunheimahaishibaima,zhaodaogongzuojiushihaoma中共出现3次
+			
+第三题: 分析以下需求,并用代码实现
+	1.键盘录入一个源字符串由字符串变量scrStr接收
+	2.键盘录入一个要删除的字符串由字符串变量delStr接收
+	3.要求
+		删除该字scrStr符串中的所有delStr字符串（最终的字符串中不能包含delStr），要求打印删除后的结果以及删除了几个delStr字符串
+	4.代码运行打印格式:
+		请输入源字符串:java woaijava,i like jajavava i enjoy java
+		请输入要删除的字符串:java
+		控制台输出结果:源字符串中总共包含:5 个 java 删除java后的字符串为: woai,i like  i enjoy
+		
+第四题: 分析以下需求,并用代码实现
+	1.键盘录入一个字符串
+	2.将该字符串变成字符数组(不能使用toCharArray()方法)
+	3.将字符数组中的所有大写字母变成小写字母
+	4.如果第一位和最后一位的内容不相同,则交换
+	5.将字符数组中索引为偶数的元素变成'~'
+	6.打印数组元素的内容
+	
+第五题: 分析以下需求,并用代码实现
+	1.定义String getStr()方法
+		功能描述：获取长度为5的随机字符串，字符串由随机的4个大写英文字母和1个0-9之间（包含0和9）的整数组成
+	2.定义main方法，方法内完成：
+		调用getStr()方法，获取返回值,并在控制台打印返回值	
+
+第六题: 练习今日视频中的代码
+
