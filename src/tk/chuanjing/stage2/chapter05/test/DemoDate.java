@@ -1,5 +1,6 @@
 package tk.chuanjing.stage2.chapter05.test;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -16,6 +17,12 @@ public class DemoDate {
 		
 //		test01();
 		test02();
+		
+//		TestSimpleDateFormat();
+		
+//		TestCalendar();
+		
+//		TestDateConstructor();
 	}
 
 	/**
@@ -58,5 +65,43 @@ public class DemoDate {
 		int month = c.get(Calendar.MONTH) + 1;	
 		int day = c.get(Calendar.DAY_OF_MONTH);
 		System.out.println(year+"年"+month+"月"+day+"日");
+	}
+	
+	private static void TestSimpleDateFormat() {
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String format = sdf.format(new Date());
+		System.out.println(format);
+	}
+	
+	private static void TestCalendar() {
+		Calendar c = Calendar.getInstance();
+		
+		//void set(int field, int value) ：把指定的字段修改成指定的值
+//		c.set(Calendar.DAY_OF_MONTH, 20);
+		
+		//void add(int field, int amount): 在指定的字段上加上指定的值
+//		c.add(Calendar.DAY_OF_MONTH, -1);
+		
+		//int get(int field) // 返回给定日历字段的值
+		//public static final int YEAR 1 
+		//System.out.println(Calendar.YEAR);
+		
+		//int year = c.get(1);
+		int year = c.get(Calendar.YEAR);
+		int month = c.get(Calendar.MONTH) + 1;
+		int day = c.get(Calendar.DAY_OF_MONTH);
+		
+		System.out.println(year + "年" + month + "月" + day + "日");
+	}
+	
+	private static void TestDateConstructor() {
+		//Date()
+		Date d = new Date();
+		System.out.println(d);//Thu Aug 26 14:17:28 CST 2049
+		System.out.println(d.toLocaleString());
+		
+		//Date(long date) 
+		Date d2 = new Date(1000 * 60 * 60 * 24);//时区 有时差
+		System.out.println(d2.toLocaleString());
 	}
 }
