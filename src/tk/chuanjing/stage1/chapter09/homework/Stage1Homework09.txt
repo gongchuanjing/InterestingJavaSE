@@ -1,0 +1,73 @@
+今日作业(必做)
+------------------------------------------------------------------
+第一题：分析以下需求，并用代码实现	
+	1.按照以下描述完成类的定义。
+		学生类
+			属性：
+				姓名name
+				年龄age
+				成绩score
+			行为：
+			吃饭eat()
+			stuty(String content)(content:表示学习的内容)
+	2.定义学生工具StudentsTool,有四个方法,描述如下
+		public void listStudents(Student[] arr):遍历打印学生信息
+		public Student getMaxStudent(Student[] arr):获取成绩最高的学员
+		public int getAverageScore(Student[] arr):获取学生成绩的平均值
+		public int getCount(Student[] arr):获取不及格的学员数量
+	3.定义测试类TestStudentTool，在main方法中首先创建长度为5的Student数组并初始化数据,再创建StudentsTool类的对象,并调用以上方法	
+
+第二题：分析以下需求，并用代码实现	
+		1.定义ArrayList集合，存入多个字符串"abc" "def"  "efg" "qwe" "swd" "wwe"
+		2.使用for循环获取集合中索引为3的元素并打印
+		3.将集合中每个元素中的小写字母变成大写字母
+		4.在上一步的基础上,将集合转换成String类型的数组,遍历打印数组
+
+第三题：分析以下需求，并用代码实现
+		1.定义Student类
+			属性:
+				姓名：String name
+				年龄：int age
+				成绩：int score
+			行为:
+				空参构造方法
+				有参构造方法
+				set和get方法
+				toString方法
+		2.定义测试类,进行测试
+			(1)创建10个学生对象存入ArrayList集合中
+			(2)打印最高分的学员姓名、年龄、成绩  [要求封装1个方法  参数是集合对象   返回值类型为Student]
+			(3)打印不及格的学员信息及数量		 [要求封装一个方法完成]
+				
+第四题：分析以下需求，并用代码实现
+		1.定义ArrayList集合，存入多个字符串
+		   如:"ab1" "123ad"  "bca" "dadfadf"  "dddaaa"  "你好啊"  "我来啦"  "别跑啊"
+		2.遍历集合,删除长度大于5的字符串,打印删除后的集合对象
+		3.基于上一步,删除集合中元素包含0-9数字的字符串(只要字符串中包含0-9中的任意一个数字就需要删除此整个字符串)
+	
+第五题：分析以下需求，并用代码实现
+		定义MyArrays工具类，该工具类中有以下方法，方法描述如下：
+		1.public static void reverse(ArrayList<Integer> list);
+			参数ArrayList<Integer> list:要进行操作的集合对象		
+			要求：对list集合对象中的元素进行反转(第一个和最后一个交换，第二个和倒数第二个交换，第三个和倒数第三个交换...)
+		
+		2.public static Integer max(ArrayList<Integer> list);
+			参数ArrayList<Integer> list:要进行操作的集合对象		
+			要求：求出list集合对象中的最大值并返回
+		
+		3.public static Integer min(ArrayList<Integer> list);
+			参数ArrayList<Integer> list:要进行操作的集合对象		
+			要求：求出list集合对象中的最小值并返回
+		
+		4.public static int indexOf(ArrayList<Integer> list,Integer i);
+			参数ArrayList<Integer> list:要进行操作的集合对象
+			参数Integer i:需要在集合中查找的元素
+			要求：求出元素i在list集合中第一次出现的索引，如果没有返回-1
+		
+		5.public static void replaceAll(ArrayList<Integer> list,Integer oldValue,Integer newValue);
+			参数ArrayList<Integer> list:要进行操作的集合对象
+			参数Integer oldValue:需要被替换掉的原值
+			参数Integer newValue：替换后的新值
+			要求：将list集合中的所有值为oldValue的元素替换为newValue
+			
+第六题: 练习今日视频中的代码(尤其是学生管理系统,重点之重点)
