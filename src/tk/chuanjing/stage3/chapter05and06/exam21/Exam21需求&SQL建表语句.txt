@@ -1,0 +1,102 @@
+编写程序，从两个关联表中查询数据，并显示查询结果；
+ 请按以下步骤制作程序：
+
+1). 创建数据库:Test1（复制以下SQL语句执行）
+ DROP DATABASE IF EXISTS Test1;
+ CREATE DATABASE Test1;
+
+2). 创建表：dept(部门表)，有如下结构及数据：（复制以下SQL语句执行）
+ USE Test1;
+ DROP TABLE IF EXISTS dept;
+ CREATE TABLE dept (
+    id INT(11) NOT NULL AUTO_INCREMENT, -- 部门ID
+    deptname VARCHAR(100) DEFAULT NULL, -- 部门名称
+    deptdesc VARCHAR(1000) DEFAULT NULL, -- 部门说明
+    PRIMARY KEY (id)
+ ) ENGINE=INNODB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+   INSERT  INTO dept(id,deptname,deptdesc) VALUES (1,'销售部','销售部'),(2,'  财务部','财务部'),(3,'人事部','人事部');
+
+3). 创建表：employee(员工表) （复制以下SQL语句执行）
+ USE Test1;
+ DROP TABLE IF EXISTS employee;
+ CREATE TABLE employee (
+  id DOUBLE ,
+ NAME VARCHAR (300),  -- 员工姓名
+ age DOUBLE ,    -- 员工年龄
+ sex VARCHAR (6),   -- 员工性别
+ salary DOUBLE ,   -- 薪水
+ empdate DATE ,   -- 入职日期
+ deptid DOUBLE    -- 所属部门ID
+ ); 
+
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(1,'Carl',35,'男',35000,'2000-10-07',1);
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(2,'Denise',32,'女',38000,'2005-11-12',2);
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(3,'Diana',30,'女',32000,'2008-03-14',2);
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(4,'David',40,'男',36000,'2007-09-18',NULL);
+
+4). 启动Eclipse，建立项目：Test1_Pro
+
+5). 将所需第三方jar包复制到项目的lib目录下：
+  a).C3P0包；
+  b).DBUtils包；
+  c).MySQL连接驱动包；
+
+6). 在src下放置C3P0连接池的配置文件：c3p0-confi1g.xml。
+  注意：
+  a). 使用默认配置；
+  b). 将基本连接项配置为与刚刚创建的数据库的连接；
+
+7). 创建包：cn.itcast.tools;在此包下创建类：JDBCUtils工具类，用于封装C3P0连接池，   
+   包含以下成员：
+  a). 私有，静态成员变量：ComboPooledDataSource 并创建对象；加载配置文
+           件的默认配置。
+  b). 公有，静态成员方法：public static DataSource getDataSource()，此方法返
+           回C3P0连接池对象；
+  c). 公有，静态成员方法：public static Connection getConnection()，此方法返回
+           通过C3P0连接池获取的Connection对象；
+
+8). 创建包：cn.itcast.domain。参照两个表格，在此包下创建以下两个JavaBean：要求
+   私有化所有成员属性；公有无参、全参构造方法；所有属性的get/set方法：
+  a). Dept
+  b). Employee（包含成员属性Dept）
+
+9). 创建包：cn.itcast.app。在此包下创建类：MainApp，并且包含main()方法，在main()
+   方法中按如下要求编写代码：
+a) 使用连接池创建QueryRunner对象；
+b) 定义SQL语句：查询所有的员工信息 (不包含没有部门的员工)，并将每个员工信息封装到一个Employee对象中。
+c) 遍历所有员工信息，查询每个员工的部门信息，并将对象的部门信息封装到Employee内部的Dept对象中；
+d) 遍历所有员工信息，打印每个员工的：员工姓名、性别、年龄、所属部门名称。
+
+
+
+1). 创建数据库:Test1（复制以下SQL语句执行）
+	DROP DATABASE IF EXISTS Test1;
+	CREATE DATABASE Test1;
+2). 创建表：dept(部门表)，有如下结构及数据：（复制以下SQL语句执行）
+	USE Test1;
+	DROP TABLE IF EXISTS dept;
+	CREATE TABLE dept (
+  		id INT(11) NOT NULL AUTO_INCREMENT,	-- 部门ID
+  		deptname VARCHAR(100) DEFAULT NULL,	-- 部门名称
+  		deptdesc VARCHAR(1000) DEFAULT NULL,	-- 部门说明
+  		PRIMARY KEY (id)
+	) ENGINE=INNODB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+			INSERT  INTO dept(id,deptname,deptdesc) VALUES (1,'销售部','销售部'),(2,'		财务部','财务部'),(3,'人事部','人事部');
+3). 创建表：employee(员工表) （复制以下SQL语句执行）
+	USE Test1;
+	DROP TABLE IF EXISTS employee;
+	CREATE TABLE employee (
+		id DOUBLE ,
+	NAME VARCHAR (300),		-- 员工姓名
+	age DOUBLE ,				-- 员工年龄
+	sex VARCHAR (6),			-- 员工性别
+	salary DOUBLE ,			-- 薪水
+	empdate DATE ,			-- 入职日期
+	deptid DOUBLE 			-- 所属部门ID
+	); 
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(1,'Carl',35,'男',35000,'2000-10-07',1);
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(2,'Denise',32,'女',38000,'2005-11-12',2);
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(3,'Diana',30,'女',32000,'2008-03-14',2);
+INSERT INTO employee (id, NAME, age, sex, salary, empdate, deptid) VALUES(4,'David',40,'男',36000,'2007-09-18',NULL);
+
+
