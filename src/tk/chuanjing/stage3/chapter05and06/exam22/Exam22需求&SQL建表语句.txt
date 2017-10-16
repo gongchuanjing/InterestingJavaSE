@@ -1,0 +1,102 @@
+编写程序，实现Diana(卡号：'6212999999999')向Carl(卡号：'6212888888888')转
+      账600万元。另外：银行规定，银行账户大于、等于1500万时，利率按2.8计
+      算；否则，利率按2.5计算；此程序需要事务处理；
+ 请按以下步骤制作程序：
+
+1). 创建数据库:Test2（复制以下SQL语句执行）
+ DROP DATABASE IF EXISTS Test2;
+ CREATE DATABASE Test2;
+
+2). 创建表：account(账户表)，有如下结构及数据：（复制以下SQL语句执行）
+ USE test2;
+ DROP TABLE IF EXISTS account;
+CREATE TABLE account (
+  id int(11) NOT NULL AUTO_INCREMENT, 
+  username varchar(100) DEFAULT NULL, -- 用户姓名
+  cardid varchar(100) DEFAULT NULL,  -- 卡号
+  balance double(10,2) DEFAULT NULL, -- 当前余额
+  moneyRate double(4,2) DEFAULT NULL, -- 应用利率
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+     
+      insert  into account(id,username,cardid,balance,moneyRate) 
+  values (1,'Carl','6212888888888',12000000.00,2.50),
+    (2,'Diana','6212999999999',20000000.00,2.80);
+
+3). 创建表：Transaction(交易记录表) （复制以下SQL语句执行）
+ USE test2;
+ DROP TABLE IF EXISTS transaction;
+CREATE TABLE transaction (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  cardid varchar(100) DEFAULT NULL, -- 交易卡号
+  tratype varchar(100) DEFAULT NULL,    -- 交易类型：转入，转出
+  tramoney double(10,2) DEFAULT NULL, -- 交易金额
+  tradate datetime DEFAULT NULL, -- 交易日期
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+4). 启动Eclipse，建立项目：Test2_Pro
+
+5). 将所需第三方jar包复制到项目的lib目录下：
+  a).C3P0包；
+  b).DBUtils包；
+  c).MySQL连接驱动包；
+
+6). 在src下放置C3P0连接池的配置文件：c3p0-confi1g.xml。
+  注意：
+  a). 使用默认配置；
+  b). 将基本连接项配置为与刚刚创建的数据库的连接；
+
+7). 创建包：cn.itcast.tools;在此包下创建类：JDBCUtils工具类，用于封装C3P0连接池，   
+   包含以下成员：
+  a). 私有，静态成员变量：ComboPooledDataSource 并创建对象；加载配置文
+           件的默认配置。
+  b). 公有，静态成员方法：public static DataSource getDataSource()，此方法返
+           回C3P0连接池对象；
+  c). 公有，静态成员方法：public static Connection getConnection()，此方法返回
+           通过C3P0连接池获取的Connection对象；
+
+8). 创建包：cn.itcast.domain。参照Account表格，在此包下创建Account类：要求私有
+   化所有成员属性；公有无参、全参构造方法；所有属性的get/set方法：
+
+9). 创建包：cn.itcast.app。在此包下创建类：MainApp，并且包含main()方法，在main()
+   方法中按如下要求编写代码：
+
+a) 使用连接池创建QueryRunner对象；
+b). 判断转出方是否有足够余额，如果不足，提示信息：”余额不足！”，并结
+     束程序；
+c). 实现卡号：6212999999999向6212888888888转账600万的操作；
+           并将转入、转出记录分别写入到Transaction表中。
+     友情提醒：注意事务处理和利率的判断；查询中，所有涉及到账户的条件，全部使用”卡号”作为查询条件。
+
+
+
+创建数据库:Test2（复制以下SQL语句执行）
+	DROP DATABASE IF EXISTS Test2;
+	CREATE DATABASE Test2;
+2). 创建表：account(账户表)，有如下结构及数据：（复制以下SQL语句执行）
+	USE test2;
+	DROP TABLE IF EXISTS account;
+CREATE TABLE account (
+  id int(11) NOT NULL AUTO_INCREMENT,	
+  username varchar(100) DEFAULT NULL,	-- 用户姓名
+  cardid varchar(100) DEFAULT NULL,		-- 卡号
+  balance double(10,2) DEFAULT NULL,	-- 当前余额
+  moneyRate double(4,2) DEFAULT NULL,	-- 应用利率
+  PRIMARY KEY (id)
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+      insert  into account(id,username,cardid,balance,moneyRate) 
+  values (1,'Carl','6212888888888',12000000.00,2.50),
+	   (2,'Diana','6212999999999',20000000.00,2.80);
+3). 创建表：Transaction(交易记录表) （复制以下SQL语句执行）
+	USE test2;
+	DROP TABLE IF EXISTS transaction;
+CREATE TABLE transaction (
+  id int(11) NOT NULL AUTO_INCREMENT,
+  cardid varchar(100) DEFAULT NULL,	-- 交易卡号
+  tratype varchar(100) DEFAULT NULL,    -- 交易类型：转入，转出
+  tramoney double(10,2) DEFAULT NULL,	-- 交易金额
+  tradate datetime DEFAULT NULL,	-- 交易日期
+  PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
