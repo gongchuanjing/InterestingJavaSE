@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE persons SYSTEM "demo1.dtd">
+<!-- XML的注释 -->
+<persons>
+	<person id="aaa">
+		<name>李旭华</name>
+		<age>38</age>
+		<sex>男</sex>
+	</person>
+	
+	<person id="bbb">
+		<name>李冠希</name>
+		<age>28</age>
+		<sex>男</sex>
+	</person>
+</persons>

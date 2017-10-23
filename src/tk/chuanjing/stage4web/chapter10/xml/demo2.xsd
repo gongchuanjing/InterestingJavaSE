@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 
+    名称空间:一个XML只能引入一个DTD约束文档.使用了Schema约束XML文档,一个XML可以引入多个Schame的约束!!!
+                      如果再多个Schema文档中定义了相同的属性名称 该怎么办?
+      * 名称空间类似于java中的package.通过名称空间区分 标签或属性来自于哪个文档的！！！通常名称空间唯一的不重复的即可.一般情况下使用一个URL地址表示一个名称空间.
+      
+	xmlns				:xml name sapace .代表当前的文档应用的名称空间.
+	targetNameSpace		:目标名称空间.
+	elementFormDefault	:
+ -->
+<schema 
+xmlns="http://www.w3.org/2001/XMLSchema" 
+targetNamespace="http://www.itheima.com/ee25" 
+elementFormDefault="qualified">
+	<!-- 复杂标签 -->
+	<element name="persons">
+		<!-- 复杂类型 -->
+		<complexType>
+			<sequence maxOccurs="unbounded" minOccurs="1">
+				<element name="person">
+					<complexType>
+						<sequence>
+							<!-- 简单标签 -->
+							<element name="name" type="string"></element>
+							<element name="age" type="int"></element>
+							<element name="sex" type="string"></element>
+						</sequence>
+						<attribute name="id" type="string" use="required"/>
+					</complexType>
+				</element>
+			</sequence>
+		</complexType>
+	</element>
+</schema>

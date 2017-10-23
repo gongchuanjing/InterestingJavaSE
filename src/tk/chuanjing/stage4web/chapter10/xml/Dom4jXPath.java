@@ -21,6 +21,7 @@ public class Dom4jXPath {
 
 	/**
 	 * DOM4J的XPath的写法
+	 * xml/books.xml	这个文件已经删除了，运行会报错
 	 * @throws DocumentException 
 	 */
 	private static void test() throws DocumentException {

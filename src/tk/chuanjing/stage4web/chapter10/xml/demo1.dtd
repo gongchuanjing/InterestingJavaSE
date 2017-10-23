@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!ELEMENT persons (person+)>
+<!ELEMENT person (n	<element name="person">
+		<complexType>
+			<sequence>	 
+				<!-- 简单标签 -->
+				<element name="name" type="string"></element>
+				<element name="age" type="int"></element>
+				<element name="sex" type="string"></element>
+			</sequence>
+		</complexType>
+	</element>x)*>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT age (#PCDATA)>
+<!ELEMENT sex (#PCDATA)>
+
+<!ATTLIST person id ID #REQUIRED>

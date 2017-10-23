@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- XML的注释 -->
+<persons
+	xmlns:aa="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://www.itheima.com/ee25"
+	aa:schemaLocation="http://www.itheima.com/ee25 demo2.xsd"
+>
+	<person id="p1">
+		<name>李旭华</name>
+		<age>38</age>
+		<sex>男</sex>
+	</person>
+	
+	<person id="p2">
+		<name>李冠希</name>
+		<age>28</age>
+		<sex>男</sex>
+	</person>
+</persons>
