@@ -28,4 +28,21 @@ public class FileDemo1 {
 		
 		File f4 = new File(new File("D:\\a"),"b.txt");
 	}
+	
+	/**
+	 * 测试方法：boolean renameTo(File dest)
+	 */
+	public static void test() {
+		File f = new File("G:\\d.txt");
+		File f2 = new File("G:\\e.txt");
+		
+		//boolean renameTo(File dest) : 将当前File对象所指向的路径 修改为 指定File所指向的路径
+		//注意：修改的文件路径不能存在，如果存在则修改失败
+		
+		System.out.println(f);
+		System.out.println(f2);
+		System.out.println(f.renameTo(f2));
+		System.out.println(f);
+		System.out.println(f2);
+	}
 }
