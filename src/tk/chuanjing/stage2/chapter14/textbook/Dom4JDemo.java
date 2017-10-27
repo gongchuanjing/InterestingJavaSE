@@ -27,7 +27,22 @@ import org.dom4j.Element;
  */
 public class Dom4JDemo {
 	public static void main(String[] args) throws Exception  {
-		method7();
+//		method7();
+		exam16();
+	}
+	
+	private static void exam16() throws Exception {
+		Document document = Dom4JUtils.getDocument();
+		//获取根元素
+		Element rootElement = document.getRootElement();
+		
+		List<Element> elements = rootElement.elements();
+		
+		Element element = elements.get(0);
+		
+//		String text = element.elementText("Name");
+		String text = element.element("Name").getText();
+		System.out.println(text);
 	}
 
 	/** 8、添加属性：State： GDP="99999亿" */
