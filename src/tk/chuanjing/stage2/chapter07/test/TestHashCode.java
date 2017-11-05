@@ -6,7 +6,8 @@ import java.util.Set;
 
 /**
  * @author ChuanJing
- * @date 2017年4月19日 下午4:18:57  * @version 1.0
+ * @date 2017年4月19日 下午4:18:57
+ * @version 1.0
  * 
  *       总思路：hashCode不同时，则必为不同对象。hashCode相同时，根据equlas()方法判断是否为同一对象。
  *       在HashSet，HashMap，HashTable中都存在该问题。
