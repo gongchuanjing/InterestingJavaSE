@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Companys>
+	<bean id="001" className="tk.chuanjing.stage2.chapter13.reflect_xml.CompanyTencent">
+		<property name="name" value="腾讯"></property>
+		<property name="money" value="500亿"></property>
+		<Leader>
+			<property name="name" value="马化腾"></property>
+			<property name="age" value="30"></property>
+		</Leader>
+	</bean>
+	<bean id="002" className="tk.chuanjing.stage2.chapter13.reflect_xml.CompanyBaiDu">
+		<property name="name" value="百度"></property>
+		<property name="money" value="400亿"></property>
+		<Leader>
+			<property name="name" value="小百"></property>
+			<property name="age" value="45"></property>
+		</Leader>
+	</bean>
+	<bean id="003" className="tk.chuanjing.stage2.chapter13.reflect_xml.CompanyAli">
+		<property name="name" value="阿里"></property>
+		<property name="money" value="800亿"></property>
+		<Leader>
+			<property name="name" value="马云"></property>
+			<property name="age" value="50"></property>
+		</Leader>
+	</bean>
+	<bean id="004" className="tk.chuanjing.stage2.chapter13.reflect_xml.CompanySina">
+		<property name="name" value="新浪"></property>
+		<property name="money" value="300亿"></property>
+		<Leader>
+			<property name="name" value="小新"></property>
+			<property name="age" value="35"></property>
+		</Leader>
+	</bean>
+</Companys>
