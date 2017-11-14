@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans>
+
+	<bean id="u001" className="tk.chuanjing.stage2.chapter13.reflect_xml2.User">
+		<property name="uid" value="user001"></property>
+		<property name="userName" value="jack"></property>
+		<property name="password" value="1234"></property>
+	</bean>
+	
+	<bean id="b001" className="tk.chuanjing.stage2.chapter13.reflect_xml2.Book">
+		<property name="bid" value="back001"></property>
+		<property name="title" value="标题"></property>
+		<property name="price" value="998"></property>
+	</bean>
+</beans>
