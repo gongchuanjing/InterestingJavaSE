@@ -54,3 +54,7 @@
 		chapter04	DBCP连接池
 		chapter05	管家婆项目(上)
 		chapter06	管家婆项目(下)
+
+	stage4（web部分，只有两章，其他章节在InterestingJavaEE工程下）：
+		chapter09	c3p0连接池
+		chapter10	XML，模仿Tamcat
