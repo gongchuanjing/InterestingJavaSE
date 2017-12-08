@@ -62,3 +62,10 @@
 	stage4（web部分，只有两章，其他章节在InterestingJavaEE工程下）：
 		chapter09	c3p0连接池
 		chapter10	XML，模仿Tamcat
+
+## 友情链接，其他技术的整理：
+JavaEE：[InterestingJavaEE](https://github.com/gongchuanjing/InterestingJavaEE.git)
+
+Struts2：[InterestingStruts2](https://github.com/gongchuanjing/InterestingStruts2.git)
+
+Hibernate：[InterestingStruts2](https://github.com/gongchuanjing/InterestingHibernate.git)
