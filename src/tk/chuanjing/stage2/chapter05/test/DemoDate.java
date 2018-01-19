@@ -1,5 +1,6 @@
 package tk.chuanjing.stage2.chapter05.test;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
@@ -11,18 +12,20 @@ import java.util.Date;
  */
 public class DemoDate {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws ParseException {
 //		Date d = new Date(1000L * 60 * 60 * 24 * 365);//注意，这个地方传参必须是long类型
 //		System.out.println(d.toLocaleString());
 		
 //		test01();
-		test02();
+//		test02();
 		
 //		TestSimpleDateFormat();
 		
 //		TestCalendar();
 		
 //		TestDateConstructor();
+		
+		test3();
 	}
 
 	/**
@@ -103,5 +106,12 @@ public class DemoDate {
 		//Date(long date) 
 		Date d2 = new Date(1000 * 60 * 60 * 24);//时区 有时差
 		System.out.println(d2.toLocaleString());
+	}
+	
+	private static void test3() throws ParseException {
+		String strDate = "1981-09-19 09:07:27.727";
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss.uuu");
+		Date date = sdf.parse(strDate);
+		System.out.println(date);
 	}
 }
