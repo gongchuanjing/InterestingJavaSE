@@ -16,11 +16,11 @@ import java.io.IOException;
 public class CopyFile5Test {
 
 	public static void main(String[] args) throws IOException {
-		String srcFileName = "我爱学习.txt";
-		String destFileName = "b.txt";
+		String srcFileName = "res\\我爱学习.txt";
+		String destFileName = "res\\b.txt";
 		
-		method1(srcFileName,destFileName);
-//		method2(srcFileName,destFileName);
+//		method1(srcFileName,destFileName);
+		method2(srcFileName,destFileName);
 //		method3(srcFileName,destFileName);
 //		method4(srcFileName,destFileName);
 //		method5(srcFileName,destFileName);
