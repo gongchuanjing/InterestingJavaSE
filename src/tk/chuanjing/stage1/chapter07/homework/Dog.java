@@ -50,4 +50,9 @@ public class Dog {
 	public void lookHome() {
 		System.out.println(color + "的"+ breed +"正在看家....");
 	}
+
+	@Override
+	public String toString() {
+		return "Dog [color=" + color + ", breed=" + breed + "]";
+	}
 }
