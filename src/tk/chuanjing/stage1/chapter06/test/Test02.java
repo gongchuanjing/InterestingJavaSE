@@ -5,7 +5,7 @@ import java.util.Random;
 /**
  * 定义长度为10的数组，给数组每一个元素赋值，值是1-20的随机数。要求不能重复。
  */
-public class Arr43 {
+public class Test02 {
     public static void main(String[] args) {
         int[] arr=new int[10];
         Random rn=new Random();
