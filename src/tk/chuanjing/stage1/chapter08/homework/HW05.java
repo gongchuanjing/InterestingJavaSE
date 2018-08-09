@@ -1,6 +1,5 @@
 package tk.chuanjing.stage1.chapter08.homework;
 
-import java.util.Arrays;
 import java.util.Random;
 
 /**
@@ -32,7 +31,7 @@ public class HW05 {
 		}
 
 		// 随机生成一个数字并转成字符串
-		String str2 = r.nextInt(10) + "";
+		String str2 = r.nextInt(10) + "";	//8-->"8"
 		
 		// 随机生成一个数字，作为数字在字符串中的位置
 		int index = r.nextInt(5);
