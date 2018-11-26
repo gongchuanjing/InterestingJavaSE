@@ -16,7 +16,6 @@ public class AbstractDemo {
 		Dog d = new Dog();
 		d.barking();
 	}
-
 }
 
 abstract class Animal {

@@ -9,22 +9,14 @@ import java.util.Arrays;
  * @version 1.0
  */
 public class Interview {
+
 	public static void main(String[] args) {
-		/*
-		A a = new A();
-		a.age = 20;
-		a.name = "张三";
-		
-		System.out.println("之前：" + a);
-		test(a);
-		System.out.println("之后：" + a);
-		*/
 		maoPaoPaiXu();		//冒泡排序
 		xuanZhePaiXu();		//选择排序
 		shunXuChaZhao();	//顺序查找
 		erFenChaZhao();		//二分(折半)查找
 	}
-	
+
 	/**
 	 * 二分(折半)查找
 	 * 	循环操作：
@@ -126,36 +118,5 @@ public class Interview {
 		}
 
 		System.out.println("排序后结果：" + Arrays.toString(arr));
-	}
-
-	protected static void test(A s) {
-		s.age = 30;
-		s.name = "李四";
-		
-		System.out.println("中间：" + s);
-	}
-}
-
-class A {
-	public A() {
-		
-	}
-	
-	public int age;
-	public String name;
-	
-	@Override
-	public String toString() {
-		return "A [age=" + age + ", name=" + name + "]";
-	}
-}
-
-class B {
-	public B() {
-		
-	}
-	
-	public B(String name) {
-		
 	}
 }

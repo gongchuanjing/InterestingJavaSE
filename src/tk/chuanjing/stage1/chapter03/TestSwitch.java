@@ -1,5 +1,6 @@
 package tk.chuanjing.stage1.chapter03;
 
+
 public class TestSwitch {
 
 	public static void main(String[] args) {
