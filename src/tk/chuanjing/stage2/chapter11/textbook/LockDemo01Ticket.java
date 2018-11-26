@@ -1,4 +1,4 @@
-package tk.chuanjing.stage2.chapter11.test;
+package tk.chuanjing.stage2.chapter11.textbook;
 
 /*
     模拟卖票案例
