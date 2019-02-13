@@ -62,6 +62,8 @@
 	stage4（web部分，只有两章，其他章节在InterestingJavaEE工程下）：
 		chapter09	c3p0连接池
 		chapter10	XML，模仿Tamcat
+		
+	interview：面试题
 
 ## 打个广告：其他技术的整理
 JavaEE：[InterestingJavaEE](https://github.com/gongchuanjing/InterestingJavaEE.git)
