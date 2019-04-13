@@ -10,7 +10,7 @@ import java.util.HashMap;
 
 1到100循环，把奇数
  */
-public class Interview20190213 {
+public class D20190213_Interview {
 
 	public static void main(String[] args) {
 		int arr[] = new int[50];

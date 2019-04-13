@@ -8,7 +8,7 @@ import java.util.Arrays;
  * @date 2018年4月16日 上午9:03:24
  * @version 1.0
  */
-public class Interview {
+public class D20180416_Interview {
 
 	public static void main(String[] args) {
 		maoPaoPaiXu();		//冒泡排序
