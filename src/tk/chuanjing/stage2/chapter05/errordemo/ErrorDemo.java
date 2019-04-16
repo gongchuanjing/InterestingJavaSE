@@ -11,8 +11,8 @@ public class ErrorDemo {
 	}
 
 	private static void test1() {
-//		byte[] bs = {1,2,3,4};
-		byte[] bs = {65,66,67,68};
+		byte[] bs = {1,2,3,4};
+//		byte[] bs = {65,66,67,68};
 		String s = new String(bs);
 		System.out.println(s);
 	}
